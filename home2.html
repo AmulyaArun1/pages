@@ -1,0 +1,130 @@
+<html>
+    <head>
+        
+<style>
+    html{
+        
+    }
+    body{
+        background: radial-gradient(circle, rgba(167,90,26,0.039653361344537785) 0%, rgba(219,212,162,1) 90%);
+        }
+ul {
+  list-style-type: none;
+  margin-bottom:500px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  
+}
+
+li {
+    position: -webkit-sticky; /* Safari */
+  position: sticky;
+    color: white;
+  float: left;
+  
+ 
+}
+
+li:last-child {
+  border-right: none;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+}
+
+li a {
+    border: #333;
+    border-right: #333;
+    border-left: #333;
+  font-family: sans-serif;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+}
+
+li a:hover:not(.active) {
+    border-right: #333;
+    border-left: #333;
+          background-color: rgb(207, 100, 51);
+        
+
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+}
+
+.active {
+  background-color: rgb(207, 100, 51);
+  
+}
+h3 {
+  text-align: center;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+    u{
+       
+        size: 10px;
+    }  
+p{
+    
+    padding-left: 20px;
+    text-align: center;
+    margin-left: 200px;
+    text-transform: uppercase;
+    size: 50px;
+}
+
+              </style>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script></head>
+    <body>
+            <ul>
+                <li><h4><p>Vehicle Reservation System</p></h4></li>
+                    
+                    <li style="float:right"><a class="active"href="#about">Log Out</a></li>
+                    <li style="float:right"><a href="#news">Update</a></li>
+                    <li style="float:right"><a class="active" href="#home">Home</a></li>                    
+                </ul>
+                  <br>
+                  <h3><u>Welcome To Homepage ${user.firstName}</u>
+                </h3>
+                <br><br>
+        <div class="table-responsive">          
+        <table class="table table-hover" >
+          <thead>
+            <tr>
+              <th>Vehicle Number</th>
+              <th>Branch</th>
+              <th>Insurance Expiry</th>
+              <th>Last Service</th>
+              <th>Service Due</th>
+              <th>Vehicle Type</th>
+              <th>Action</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>000</td>
+              <td>ABC</td>
+              <td>XYZ</td>
+              <td>00/00/0000</td>
+              <td>H.No. ***, ABC</td>
+              <td>MNO</td>
+              <td><input type="button" value="update" class="btn btn-primary"></td>
+            </tr>
+            
+       
+          </tbody>
+        </table>
+        </div>
+        
+    </body>
+    </html>
