@@ -1,5 +1,5 @@
 <html>
-<style>        /* BASIC */
+<style>       
         
         
         body {
@@ -43,8 +43,7 @@
         #formContent {
           -webkit-border-radius: 10px 10px 10px 10px;
           border-radius: 10px 10px 10px 10px;
-          background: #fff;
-          padding: 30px;
+          padding: 10px;
           width: 90%;
           max-width: 450px;
           position: relative;
@@ -86,9 +85,10 @@
   display: block;
   margin: 20px auto;
   text-align: center;
-  padding: 15px 40px;
+  padding: 15px 20px;
+  opacity: 0.8;
+  background-color: #34a1b4;
   outline: none;
-  color: white;
   border-radius: 25px;
   cursor: pointer;
   text-transform: uppercase;
@@ -122,7 +122,6 @@
   padding: 15px 45px;
   width: 200px;
   outline: none;
-  color: white;
   border-radius: 25px;
   text-align: center;
   transition: 250ms width ease, 250ms border-color ease;
@@ -135,7 +134,6 @@
   padding: 15px 45px;
   width: 200px;
   outline: none;
-  color: white;
   border-radius: 25px;
   text-align: center;
   transition: 250ms width ease, 250ms border-color ease;
@@ -148,13 +146,11 @@
   padding: 15px 45px;
   width: 200px;
   outline: none;
-  color: white;
   border-radius: 25px;
   text-align: center;
   transition: 250ms width ease, 250ms border-color ease;
         }
         input[type=number]:focus {
-          background-color: #fff;
           border-bottom: 2px solid #5fbae9;
         }
         input[list=category] {
@@ -165,7 +161,6 @@
   padding: 15px 45px;
   width: 200px;
   outline: none;
-  color: white;
   border-radius: 25px;
   text-align: center;
   transition: 250ms width ease, 250ms border-color ease;
@@ -178,7 +173,6 @@
   padding: 15px 45px;
   width: 200px;
   outline: none;
-  color: white;
   border-radius: 25px;
   text-align: center;
   transition: 250ms width ease, 250ms border-color ease;
@@ -191,12 +185,11 @@
   padding: 15px 45px;
   width: 200px;
   outline: none;
-  color: white;
   border-radius: 25px;
   text-align: center;
   transition: 250ms width ease, 250ms border-color ease;
         }
-        
+       
         input[type=password] {
           border: 2px solid #0097e6;
   background: none;
@@ -205,36 +198,30 @@
   padding: 15px 45px;
   width: 200px;
   outline: none;
-  color: white;
+
   border-radius: 25px;
   text-align: center;
   transition: 250ms width ease, 250ms border-color ease;
         }
-        input[type=email]:focus {
-          background-color: #fff;
-          border-bottom: 2px solid #5fbae9;
-        }
-        input[type=password]:focus {
-          background-color: #fff;
-          border-bottom: 2px solid #5fbae9;
-        }
-        input[type=text]:placeholder {
-          color: #cccccc;
-        }
+        
+    
         
         
 .box {
   width: 350px;
-  padding: 40px;
+  padding: 10px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  background: #191919;
+  background: radial-gradient(circle, rgba(255,255,255,0.12368697478991597) 0%, rgba(106,184,189,1) 75%);
   border: none;
   border-radius: 25px;
   text-align: center;
-  opacity: 0.9;
+  opacity: 1.0;
+}
+p{
+  color: #0d0d0d;
 }
 h1{
   color: rgb(114, 105, 105);
@@ -396,31 +383,30 @@ h1{
          
       
           <!-- Login Form -->
-          <form class="box">
-            <br><br>
+         <form class="box" action="register.html">
+            <br><br><br><br>
               <div class="fadeIn first">
-                  <h1>Register</h1>
+                  <h1><b>Register</b></h1>
               </div>
                 <input type="text" id="empId" class="fadeIn first" name="empId" placeholder="Employee ID"required>   
                 <input type="text" id="firstName" class="fadeIn second" name="firstName" placeholder="First Name"required>   
-                <input type="text" id="lastName" class="fadeIn third" name="lastName" placeholder="Last Name"required>   
-                <input list="category" name="gender"  class="fadeIn fourth" placeholder="Gender" required>
-                                                             <datalist id="category">
-                                                               <option value="male" selected>Male
-                                                               <option value="female">Female
-                                                               <option value="other">Other
+                <input type="text" id="lastName" class="fadeIn third" name="lastName" placeholder="Last Name"required> 
+                <input list="category" name="gender"  class="fadeIn fourth" placeholder="Gender" required>  
+                		<datalist id="category">
+                                                               <option value="male" selected>Male</option>
+                                                               <option value="female">Female</option>
+                                                               <option value="other">Other</option>
                                                              </datalist>
-                 <input type="number" name="contactNumber" id="contactNumber" class="fadeIn fifth"  placeholder="Phone Number"required>   
-                 <input type="email" id="email" class="fadeIn sixth" name="email" placeholder="Email ID"required>   
+                                                            
+							 <input type="number" name="contactNumber" id="contactNumber" class="fadeIn fifth"  placeholder="Phone Number"required> 
+                <input type="email" id="email" class="fadeIn sixth" name="email" placeholder="Email ID"required>   
                 <input type="password" id="password" class="fadeIn seventh" name="password" placeholder="Password" required>
                 <input type="text" class="fadeIn ninth" placeholder="Enter Branch" name="branch" required>
                 <div class="underlineHover">                                  
-                <input type="submit" class="fadeIn eighth" value="Register"></div>
+                <input type="submit" class="fadeIn eighth" value="Register">
+			</div>
           </form>
-      
-          
-      
-        <!-- </div> -->
       </div>
       </body>
-      </html>
+      </html>							
+				
