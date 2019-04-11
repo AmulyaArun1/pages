@@ -2,12 +2,59 @@
     <head>
         
 <style>
-    html{
-        
-    }
+   
     body{
-        background: radial-gradient(circle, rgba(167,90,26,0.039653361344537785) 0%, rgba(219,212,162,1) 90%);
-        }
+      background: url(https://images.pexels.com/photos/1037995/pexels-photo-1037995.jpeg?cs=srgb&dl=art-background-blank-1037995.jpg&fm=jpg?dl&fit=crop&crop=entropy&w=1366&h=768);
+        /* background: radial-gradient(circle, rgba(167,90,26,0.039653361344537785) 0%, rgba(219,212,162,1) 90%);
+         */
+        font-family: Arial;}
+       
+.dropbtn {
+  background-color: #2196F3;
+            color: white;
+            width: 270px;
+            padding: 16px;
+            font-size: 17px;
+            border: none;
+}
+
+.dropdown {
+  margin-right: 1000px;
+  position:inherit;
+  float: right;
+  display: inline;
+  width: 300px;
+}
+.mysearch {
+  margin-bottom: 80px;
+  position:inherit;
+  float: right;
+  display:inline;
+  width: 300px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: rgb(104, 96, 96);}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
 ul {
   list-style-type: none;
   margin-bottom:500px;
@@ -70,6 +117,7 @@ h3 {
     u{
        
         size: 10px;
+        font-family: Arial;
     }  
 p{
     
@@ -80,7 +128,50 @@ p{
     size: 50px;
 }
 
+
+* {
+  box-sizing: border-box;
+}
+.Amulya{
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+  margin-bottom: -30px ;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 13.5px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
               </style>
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script></head>
@@ -96,6 +187,25 @@ p{
                   <h3><u>Welcome To Homepage ${user.firstName}</u>
                 </h3>
                 <br><br>
+               
+                  <div class="dropdown">
+                    <button class="dropbtn">Select</button>
+                    <div class="dropdown-content">
+                      <a href="#">Vehicle Number</a>
+                      <a href="#">Branch</a>
+                      <a href="#">Vehicle Type </a>
+                      <a href="#">Insurance Expiry</a>
+                      <a href="#">Service Due</a>
+                      <a href="#">Last Service</a>
+                    </div>
+                  </div>
+                    <div class="Amulya">
+                    <form class="example" action="" style="margin:auto;max-width:200px">
+                  <input type="text" placeholder="Search.." class="mysearch" name="search">
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+                </div>
+               
         <div class="table-responsive">          
         <table class="table table-hover" >
           <thead>
@@ -107,7 +217,6 @@ p{
               <th>Service Due</th>
               <th>Vehicle Type</th>
               <th>Action</th>
-              
             </tr>
           </thead>
           <tbody>
@@ -120,11 +229,8 @@ p{
               <td>MNO</td>
               <td><input type="button" value="update" class="btn btn-primary"></td>
             </tr>
-            
-       
           </tbody>
         </table>
-        </div>
-        
+        </div> 
     </body>
     </html>
