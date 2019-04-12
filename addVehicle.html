@@ -14,6 +14,7 @@
 <style type="text/css">
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,700,500);
 body {
+ 
   padding-top: 90px;
   background:#F7F7F7;
   color:#666666;
@@ -21,10 +22,9 @@ body {
   font-weight:100;
 }
 body{
+ background: url(https://images.pexels.com/photos/1037995/pexels-photo-1037995.jpeg?cs=srgb&dl=art-background-blank-1037995.jpg&fm=jpg?dl&fit=crop&crop=entropy&w=1366&h=768);
   width: 100%;
-  background: -webkit-linear-gradient(left, #42b3f4, #8cd0f7, #c1e8ff, #51beff);
-  background: linear-gradient(to right, #42b3f4, #8cd0f7, #c1e8ff, #51beff);
-  background-size: 600% 100%;
+  
   -webkit-animation: HeroBG 20s ease infinite;
           animation: HeroBG 20s ease infinite;
 }
@@ -52,6 +52,7 @@ body{
 }
 .panel {
   border-radius: 5px;
+  opacity: 0.7;
 }
 label {
   font-weight: 300;
@@ -166,8 +167,9 @@ label {
 }
 .panel-login input[type="text"],.panel-login input[type="email"],.panel-login input[type="password"] {
   height: 45px;
+  font-family: 'Times New Roman', Times, serif;
   border: 0;
-  font-size: 16px;
+  font-size: 20px;
   -webkit-transition: all 0.1s linear;
   -moz-transition: all 0.1s linear;
   transition: all 0.1s linear;
@@ -251,6 +253,10 @@ background-color: #E8E9EC;
   color: #fff;
   background-color: #2D3B55;
 }
+.h2 {
+  text-align: left;
+  font-family:  monospace;
+}
 </style>
 </head>
 <body>
@@ -263,7 +269,7 @@ background-color: #E8E9EC;
           <div class="row">
           
             <div class="col-lg-12">
-           <h2>ADD VEHICLE <a href="logout.html" class="form-control btn logout">Logout </a> </h2> 
+           <h2><b>ADD VEHICLE </b><a href="logout.html" class="form-control btn logout">Logout </a> </h2> 
              <form id="login-form" action="addVehicle.html" method="post" role="form" style="display: block;">
              
                   <div class="form-group">
