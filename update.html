@@ -13,7 +13,19 @@
 <title>Update Vehicle Here</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
 <style >
+.content {
+  padding: 16px;
+}
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
   h4 {
   text-align: center;
   font-family: sans-serif;
@@ -26,15 +38,17 @@ body {
   margin: 0;
   padding: 0;
   font-family: Montserrat, sans-serif;
+  background: url(https://images.pexels.com/photos/1037995/pexels-photo-1037995.jpeg?cs=srgb&dl=art-background-blank-1037995.jpg&fm=jpg?dl&fit=crop&crop=entropy&w=1366&h=768);
 }
 
 .flex-navbar {
-  background-color: #858697;
+  background-color: #333;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   padding: 2px 10px;
   display: flex;
   align-items: center;
+  position: fixed;
 }
 
 .flex-navbar .items.items-right {
@@ -43,8 +57,8 @@ body {
 
 
 .flex-navbar .brand {
-  color: #140700;
-  font-size: 1.45em;
+  color: white;
+  font-size: 1.35em;
 }
 .flex-navbar ul.items {
   display: flex;
@@ -55,6 +69,10 @@ body {
   color: #140700;
 	font-size: .99em;
   text-transform: uppercase;
+}
+.active {
+  background-color: rgb(207, 100, 51);
+  
 }
 
 .flex-navbar > ul.items li.item {
@@ -88,8 +106,12 @@ body {
   }
 }
 div.container {
+
   text-align: center;
+  width:1000px;
+  position: relative;
   margin: 100px auto 0;
+  
 }
 
 a {
@@ -116,15 +138,23 @@ a:hover {
   margin-top: 0.2em;
 
 }
+.container.table table-hover{
+   font-family: sans-serif;
+}
+.table-responsive{
+  
+    width:100%;
+   
+}
 
 </style>
 </head>
 <body>
 <header class="flex-navbar">
-  <h1 class="brand">Vehicle Reservation System</h1>
+  <h4 class="brand">Vehicle Reservation System</h4>
   <ul class="items items-right">
  
-    <a href="logout.html" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Logout</a>
+    <a href="logout.html" class="active" role="button" aria-pressed="true">Logout</a>
   </ul>
 </header>
 <p>Today's Date</p>
@@ -133,27 +163,30 @@ document.write(m);
 /* var t = document.getElementById('superman').value; */
 document.write(t);</script>
 
-<div class="container">
+<div class="container table table-hover">
 <a href="addVehicles.html">Add Vehicle</a>
 </div>
 <br>
-<table class="table table-sm" border="1" >
-<thead>
+<div class="container table table-hover" width="100%">
+<table class=" table-responsive" width="100%">
+<thead> 
 <tr>
-<td> <center> <span style="color:black">Vehicle Number</span>
+  
+<td> <center> <span style="color:black"> <b>Vehicle Number</b></span>
 </td>
-<td> <center> <span style="color:black">Branch</span>
+<td> <center> <span style="color:black"><b>Branch</b></span>
 </td>
-<td> <center> <span style="color:black">Insurance Expiry</span>
+<td> <center> <span style="color:black"><b>Insurance Expiry</b></span>
 </td>
-<td> <center> <span style="color:black">Last Service</span>
+<td> <center> <span style="color:black"><b>Last Service</b></span>
 </td>
-<td> <center> <span style="color:black">Service Due</span>
+<td> <center> <span style="color:black"><b>Service Due</b></span>
 </td>
-<td> <center> <span style="color:black">Vehicle Type</span>
+<td> <center> <span style="color:black"><b>Vehicle Type</b></span>
 </td>
-<td> <center> <span style="color:black">Update Here</span>
+<td> <center> <span style="color:black"><b>Action</b></span>
 </td>
+
 </tr>
 </thead>
   <tbody>
@@ -175,12 +208,12 @@ document.write(t);</script>
 <%-- <c:set property="${vehicle.vehicleNumber}" var="vehNumber" ></c:set> --%>
 <%-- <fmt:parseNumber var="vehNumber" value="${vehicle.vehicleNumber}" integerOnly="true"/>
 <fmt:parseNumber var="vehNumber" integerOnly="true" type="number" value="${vehicle.vehicleNumber}" /> --%> 
-<td> <center> <span style="color:gray"><a href="updateVehicle.html?id=${vehicle.vehicleNumber}">Update</a></span>
+<td> <center> <span style="color:black"><a href="updateVehicle.html?id=${vehicle.vehicleNumber}">Update</a></span>
 </td>
 </tr>
 </c:forEach>
-
 </tbody>
 </table>
+</div>
 </body>
 </html>
